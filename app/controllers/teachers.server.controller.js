@@ -33,7 +33,20 @@ exports.create = function(req, res) {
  * Show the current Teacher
  */
 exports.read = function(req, res) {
-
+  Teacher.findById(req.params.teacherId).exec(function(err, teacher) {
+    if (err) {
+      return res.status(400).send({
+       message: errorHandler.getErrorMessage(err)
+      });
+    } else {
+      if (!teacher) {
+        return res.status(404).send({
+            message: 'Teacher not found'
+        });
+      }
+      res.json(teacher);
+    }
+  });
 };
 
 /**

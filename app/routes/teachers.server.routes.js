@@ -8,4 +8,8 @@ module.exports = function(app) {
     .get(teachers_ctrl.list)
     .post(teachers_ctrl.create);
 
+  // the categoryId param is added to the params object for the request
+  app.route('/teachers/:teacherId')
+    .get(teachers_ctrl.read);
+
 };
