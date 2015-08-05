@@ -1,3 +1,17 @@
+This is a high level view of the MEAN stack used to create a teacher/student app and walks you through some high level details of the data flow from front-end to back-end.
+
+Previous Tutorials recommended to get to this point:
+
+1) http://www.bradoncode.com/tutorials/learn-mean-stack-tutorial/  -  Boiler Plate, Shows how to setup the env using yo, grunt and other tools. Great for starting large projects.
+
+2) https://thinkster.io/mean-stack-tutorial/  -  Starts teaching with just two files and angular. Good if you like to learn in small steps. 
+
+Taking both these tutorials provides a nice contrast to developing a simple app with a few files setup manually VS. using a project generator.
+
+
+STANDARD MEANJS README FILE BELOW:
+
+
 [![MEAN.JS Logo](http://meanjs.org/img/logo-small.png)](http://meanjs.org/)
 
 [![Build Status](https://travis-ci.org/meanjs/mean.svg?branch=master)](https://travis-ci.org/meanjs/mean)
