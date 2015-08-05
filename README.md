@@ -1,6 +1,6 @@
 This is a high level view of the MEAN stack used to create a teacher/student app and walks you through some high level details of the data flow from front-end to back-end.
 
-VIDEO: http://youtu.be/VDafbYbreO4
+VIDEO: http://youtu.be/QviHCj_S2_w
 
 Previous Tutorials recommended to get to this point:
 
