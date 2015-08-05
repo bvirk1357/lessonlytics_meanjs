@@ -1,5 +1,7 @@
 This is a high level view of the MEAN stack used to create a teacher/student app and walks you through some high level details of the data flow from front-end to back-end.
 
+VIDEO: http://youtu.be/VDafbYbreO4
+
 Previous Tutorials recommended to get to this point:
 
 1) http://www.bradoncode.com/tutorials/learn-mean-stack-tutorial/  -  Boiler Plate, Shows how to setup the env using yo, grunt and other tools. Great for starting large projects.
