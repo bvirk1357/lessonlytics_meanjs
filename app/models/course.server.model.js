@@ -6,7 +6,7 @@ var CourseSchema = new mongoose.Schema({
   title: String,
   description: String,
   subject: String,
-  password: String,
+  properties_list: String,
   teacher_id: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Comment' }]
 });
 

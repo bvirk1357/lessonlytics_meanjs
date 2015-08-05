@@ -6,8 +6,6 @@ angular.module('teachers').controller('TeachersController', ['$scope', '$state',
     // Create new Teacher
     $scope.create = function() {
 
-      // $scope.phones = Serv.query();
-
       console.log('TeachersController.create()');
       console.log('first_name: ' + $scope.first_name);
 
@@ -23,11 +21,10 @@ angular.module('teachers').controller('TeachersController', ['$scope', '$state',
 
       // Check the status of the save
       teacher.$save(function(response) {
+
         // Redirect to teachers homepage where they can see all the info for their courses
         $state.go('teachers_home');
 
-        // Clear form fields
-        $scope.name = '';
       }, function(errorResponse) {
         $scope.error = errorResponse.data.message;
       });
@@ -71,16 +68,6 @@ angular.module('teachers').controller('TeachersController', ['$scope', '$state',
       }, function(errorResponse) {
         $scope.error = errorResponse.data.message;
       });
-
-      // hard coded data
-      // $scope.teachers = [{
-      //     'first_name': 'Bikram',
-      //     'last_name': 'Virk'
-      // },
-      // {
-      //     'first_name': 'Albert',
-      //     'last_name': 'Einstien'
-      // }];
 
     };
 

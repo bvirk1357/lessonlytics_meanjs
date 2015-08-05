@@ -20,6 +20,16 @@ exports.create = function(req, res) {
 
   teacher.save(function(err){
 
+
+    // INITIAL DATABASE SEED HACK
+    // Here we create a course and attach videos to that course where each video also has atleast one question.
+    var seed_course = new Course({ title: 'Algebra I',
+      description: 'Beginner level',
+      subject: 'Mathematics',
+      properties_list: 'Math,Algebra',
+      teacher_id: teacher.id });
+    seed_course.save();
+
     if (err){
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
