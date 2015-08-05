@@ -1,0 +1,39 @@
+<section ng-controller="TeachersController" ng-init="find()">
+
+  <h2>Welcome Teacher</h2>
+  Lets teach...
+
+  </br>
+  </br>
+  <p>You currently have 0 following courses:</p>
+
+  <table>
+
+    <tr style="font-weight: bold;">
+      <td>Title</td>
+      <td>Description</td>
+      <td>Subject</td>
+      <td>Other Info</td>
+    </tr>
+
+  </table>
+
+  </br>
+  </br>
+
+  <h3>Create a new course</h3>
+
+  <h3>Other Teachers:</h3>
+  <br>
+  <table>
+    <tr>
+      <td style="width: 20%">First Name</td>
+      <td style="width: 20%">Last Name</td>
+    </tr>
+    <tr ng-repeat="teacher in teacher_list">
+      <td style="width: 20%">{{teacher.first_name}}</td>
+      <td style="width: 20%">{{teacher.last_name}}</td>
+    </tr>
+  </table>
+
+</section>

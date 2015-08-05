@@ -13,6 +13,9 @@ var mongoose = require('mongoose'),
  */
 exports.create = function(req, res) {
 
+  console.log('\nSERVER: Inside teachers.server.ctrl.create()\n');
+  console.log('\nSERVER received request: ' + req.body + ' \n');
+
   var teacher = new Teacher(req.body);
 
   teacher.save(function(err){
@@ -22,6 +25,7 @@ exports.create = function(req, res) {
         message: errorHandler.getErrorMessage(err)
       });
     } else {
+      console.log('Teacher successfully created!!!' + teacher + '!!');
       res.status(201).json(teacher);
     }
 
@@ -33,6 +37,9 @@ exports.create = function(req, res) {
  * Show the current Teacher
  */
 exports.read = function(req, res) {
+
+  console.log('\nSERVER: Inside teachers.server.ctrl.read()\n');
+
   Teacher.findById(req.params.teacherId).exec(function(err, teacher) {
     if (err) {
       return res.status(400).send({
@@ -68,13 +75,16 @@ exports.delete = function(req, res) {
  */
 exports.list = function(req, res) {
 
-  Teacher.find().exec(function(err, teachers){
+  console.log('\nSERVER: Inside teachers.server.ctrl.find()\n');
+
+  Teacher.find({}, {'_id': 0, 'first_name' : 1, 'last_name': 1}).exec(function(err, teachers){
     if(err){
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
       });
     } else {
-      res.json(teachers);
+      console.log('Sending back teacher list: ' + teachers + ', ');
+      res.json({teacher_list: teachers});
     }
   });
 
